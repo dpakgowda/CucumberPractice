@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="com.webdriveruniversity">
+    <test name="CucumberTest" junit="true">
+        <classes>
+            <class name="Runner.MainRunner" />
+            <class name="Runner.MainRunner2" />
+        </classes>
+    </test>
+</suite>
