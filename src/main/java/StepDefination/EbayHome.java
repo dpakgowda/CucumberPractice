@@ -10,6 +10,7 @@ import org.testng.Assert;
 public class EbayHome extends DriverFactory {
 
     PageManager pages = new PageManager();
+    public int count;
 
     @Given("I am on Ebay Home Page")
     public void i_am_on_ebay_home_page() {
@@ -36,15 +37,19 @@ public class EbayHome extends DriverFactory {
     }
 
     @When("I serach for {string}")
-    public void i_serach_for(String string) {
+    public void i_serach_for(String string) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        pages.getHomePage().click(pages.getHomePage().searchField);
+        pages.getHomePage().sendKeys(pages.getHomePage().searchField, string);
+        pages.getHomePage().click(pages.getHomePage().searchButton);
+        Thread.sleep(2000);
+        count = pages.getHomePage().getSearchCount(string);
     }
 
     @Then("I validate atleast {int} search items present")
     public void i_validate_atleast_search_items_present(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assert.assertTrue(count>int1);
     }
 
     @When("I serach for {string} in {string} category")
