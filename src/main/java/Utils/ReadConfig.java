@@ -28,4 +28,8 @@ public class ReadConfig {
             return "";
         return properties.getProperty("Browser");
     }
+
+    public String eBayHomePage(){
+        return properties.getProperty("url");
+    }
 }

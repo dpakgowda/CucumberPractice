@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         glue = {"StepDefination"},
         monochrome = true,
         dryRun = false,
-        tags ="",
+        tags ="@P2",
         plugin = {"pretty","html:target/cucumber","json:target/cucumber.json"}
 )
 public class MainRunner {
