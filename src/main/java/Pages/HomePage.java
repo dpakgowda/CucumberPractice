@@ -35,7 +35,7 @@ public class HomePage extends BasePage{
         waitForVisibility(element);
         String text = element.getText();
 
-        System.out.println("Main branch change");
+        System.out.println("Main + Feature branch change");
 
         return Integer.parseInt(text.replaceAll("[^0-9]",""));
     }
