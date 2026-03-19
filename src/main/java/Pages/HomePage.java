@@ -22,6 +22,18 @@ public class HomePage extends BasePage{
     public WebElement searchField;
     @FindBy(xpath = "//span[contains(text(),'Search')]")
     public WebElement searchButton;
+    @FindBy(xpath = "//span[contains(text(),'Shop by category')]")
+    public WebElement shopByCategoryButton;
+    @FindBy(xpath = "(//*[contains(text(),'Baby Essentials')])[1]")
+    public WebElement babyEssentialsButton;
+    @FindBy(css = "a[href*='Bathing-Grooming']")
+    public WebElement bathingGroomingButton;
+    @FindBy(css = "a[href*='Baby-Shampoos-Soaps']")
+    public WebElement babyShampooSoap;
+    @FindBy(xpath = "//span[contains(@class,'brw-controls__count')]")
+    public WebElement result;
+    @FindBy(xpath = "//h1[contains(@class,'textual-display page-title')]")
+    public WebElement ebayCategoryTitle;
 
     ReadConfig config = new ReadConfig();
 
@@ -35,8 +47,15 @@ public class HomePage extends BasePage{
         waitForVisibility(element);
         String text = element.getText();
 
-        System.out.println("Main + Feature branch change");
-
         return Integer.parseInt(text.replaceAll("[^0-9]",""));
+    }
+    public int getResultCount(){
+        return Integer.parseInt(result.getText().replaceAll("[^0-9]",""));
+    }
+    public void clickCategory(String category){
+        String xpath = "//span[contains(text(),'"+ category + "')]";
+        WebElement element = driver.findElement(By.xpath(xpath));
+        waitForVisibility(element);
+        click(element);
     }
 }

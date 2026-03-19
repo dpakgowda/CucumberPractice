@@ -50,24 +50,31 @@ public class EbayHome extends DriverFactory {
     public void i_validate_atleast_search_items_present(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
         Assert.assertTrue(count>int1);
+        count =0;
     }
 
     @When("I serach for {string} in {string} category")
     public void i_serach_for_in_category(String string, String string2) {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        pages.getHomePage().click(pages.getHomePage().shopByCategoryButton);
+        pages.getHomePage().jsClick(pages.getHomePage().babyEssentialsButton);
+        pages.getHomePage().click(pages.getHomePage().bathingGroomingButton);
+        pages.getHomePage().click(pages.getHomePage().babyShampooSoap);
+        Assert.assertTrue(pages.getHomePage().getResultCount()>50);
     }
 
     @When("I click on {string}")
     public void i_click_on(String string) {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        pages.getHomePage().clickCategory(string);
     }
 
     @Then("I validate that page navigates to {string} and title contains {string}")
     public void i_validate_that_page_navigates_to_and_title_contains(String string, String string2) {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        pages.getHomePage().waitForVisibility(pages.getHomePage().ebayCategoryTitle);
+        pages.getHomePage().waitForUrlContains(string);
+        Assert.assertEquals(pages.getHomePage().getText(pages.getHomePage().ebayCategoryTitle),string2);
     }
 
 }

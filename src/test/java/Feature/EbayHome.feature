@@ -22,7 +22,7 @@ Feature: Ebay Home Page Scenarios
   Scenario: Search an item in category
     Given I am on Ebay Home Page
     When I serach for 'soap' in 'BaBy' category
-    Then I validate atleast 50 search items present
+    #Then I validate atleast 50 search items present
 
   @P500
   Scenario Outline: Home page links
@@ -31,7 +31,7 @@ Feature: Ebay Home Page Scenarios
     Then I validate that page navigates to '<url>' and title contains '<title>'
 
     Examples:
-      | link    | url                                                            | title       |
-      | Motors  | https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334 | eBay Motors |
-      | Fashion | https://www.ebay.com/b/Fashion/bn_7000259856                   | Fashion     |
-      | Toys    | https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497             | Toys        |
+      | link        | url                                                            | title           |
+      | Motors      | https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334 | eBay Motors     |
+      | Electronics | https://www.ebay.com/b/Electronics/bn_7000259124               | Electronics     |
+      | Toys        | https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497             | Toys & Hobbies  |
