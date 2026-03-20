@@ -3,6 +3,7 @@ package Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v85.page.Page;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,4 +16,6 @@ public class AdvancedSearchPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(text(),'Advanced Search')]")
     public WebElement advancedSearchTitle;
+    @FindBy(xpath = "//*[@aria-labelledby='ebayLogoTitle']")
+    public WebElement ebayTitlelist;
 }
