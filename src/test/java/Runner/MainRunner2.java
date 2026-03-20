@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         dryRun = false,
         plugin = {"pretty","html:target/cucumber","json:target/cucumber.json"},
-        tags = "@P24"
+        tags = ""
 )
 
 public class MainRunner2  {
