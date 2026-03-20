@@ -18,4 +18,17 @@ public class AdvancedSearchPage extends BasePage {
     public WebElement advancedSearchTitle;
     @FindBy(xpath = "//*[@aria-labelledby='ebayLogoTitle']")
     public WebElement ebayTitlelist;
+    //@FindBy(xpath = "//label[contains(text(),'Enter keywords or item number')]")
+    @FindBy(id = "_nkw")
+    public WebElement searchKeyword;
+    @FindBy(id = "_ex_kw")
+    public WebElement exclude;
+    @FindBy(name = "_udlo")
+    public WebElement minimum;
+    @FindBy(name = "_udhi")
+    public WebElement maximum;
+    @FindBy(xpath = "(//*[@type='submit'])[2]")
+    public WebElement Search;
+
+
 }

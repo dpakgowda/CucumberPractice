@@ -34,6 +34,8 @@ public class HomePage extends BasePage{
     public WebElement result;
     @FindBy(xpath = "//h1[contains(@class,'textual-display page-title')]")
     public WebElement ebayCategoryTitle;
+    @FindBy(xpath = "//h1[contains(.,'results for')]")
+    public WebElement Result;
 
     ReadConfig config = new ReadConfig();
 
