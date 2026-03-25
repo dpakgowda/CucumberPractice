@@ -56,6 +56,14 @@
         <scope>test</scope>
       </dependency>
 
+      <!-- Cucumber TestNG -->
+      <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-testng</artifactId>
+        <version>7.14.0</version>
+        <scope>test</scope>
+      </dependency>
+
       <!-- JUnit 4 -->
       <dependency>
         <groupId>junit</groupId>
