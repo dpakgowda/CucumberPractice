@@ -15,5 +15,5 @@ import io.cucumber.junit.CucumberOptions;
         tags ="",
         plugin = {"pretty","html:target/cucumber","json:target/cucumber.json"}
 )
-public class MainRunner extends AbstractTestNGCucumberTests{
+public class MainRunner {
 }
