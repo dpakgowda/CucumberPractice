@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="com.webdriveruniversity">
-    <test name="CucumberTest" junit="true">
+    <test name="CucumberTest" junit="false">
         <classes>
             <class name="Runner.MainRunner" />
             <class name="Runner.MainRunner2" />
